@@ -34,11 +34,11 @@ class StoreQuiz(BaseModel):
 #     questions=models.ForeignKey(Question,related_name='quizquestins',on_delete=models.CASCADE)
 # 
 #     answer=models.ForeignKey(Answerss,related_name='quizanswer',on_delete=models.CASCADE)
-class Quiz(BaseModel):
-    category=models.ForeignKey(Category,on_delete=models.CASCADE)
-    question_limit=models.IntegerField(default=10)
-    quiz_name=models.CharField(max_length=100,null=True,blank=True)
+# class Quiz(BaseModel):
+#     category=models.ForeignKey(Category,on_delete=models.CASCADE)
+#     question_limit=models.IntegerField(default=10)
+#     quiz_name=models.CharField(max_length=100,null=True,blank=True)
 
-class QuizQuestion(BaseModel):
-    quiz=models.ForeignKey(Quiz,on_delete=models.CASCADE,related_name='quiz_questions')
-    question=models.ForeignKey(Question,on_delete=models.CASCADE)
+# class QuizQuestion(BaseModel):
+#     quiz=models.ForeignKey(Quiz,on_delete=models.CASCADE,related_name='quiz_questions')
+#     question=models.ForeignKey(Question,on_delete=models.CASCADE)
